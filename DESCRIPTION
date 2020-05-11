@@ -1,0 +1,29 @@
+Package: leafkin
+Title: Leaf kinematic analysis in R
+Version: 0.4.0
+Authors@R: c(
+    person(given = "Jonas",
+           family = "Bertels",
+           role = c("aut", "cre"),
+           email = "jonas.bertels@uantwerpen.be"),
+    person(given = "Gerrit",
+           family = "Beemster",
+           role = c("aut", "ctb"),
+           email = "gerrit.beemster@uantwerpen.be"))
+Description: Contains functions to easily analyse leaf length data in millimeter to 
+    obtain leaf elongation rates (mm/h) and to analyse microscopy data (i.e. meristem 
+    length and cell lengths, both in micrometer) to obtain a range of kinematic 
+    paramters on cell division and elongation.
+Depends:
+    R (>= 3.6.1)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: tidyr, 
+    tibble,
+    dplyr,
+    lubridate, 
+    tools, 
+    scales, 
+    KernSmooth
+RoxygenNote: 7.1.0
