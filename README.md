@@ -8,5 +8,7 @@ User specific errors / difficulties:
 1. Extra columns could be added through the use of Excel when creating the .txt file.
 
 The use of Excel to enter data can, whilst being convenient, sometimes be the cause of errors in R. Excel sometimes adds extra tabs, resulting in extra rows without headers and data. These extra columns get named by R with default names, usually starting with an X. The functions rely on datasets with the right format. Therefor, these extra columns will result in an error when running any of the leafkin functions. A way to solve this issue is to select only the columns you are interested in using the select function, provided by the dplyr package of the tidyverse. The following line will for instance only select 6 columns, starting with the first one, up until the sixth:
+
 leaf_length_measurements %>% select(1:6)
+
 If you make sure that the selected columns contain your data and not any extra column, processing of the data should now be errorless. 
