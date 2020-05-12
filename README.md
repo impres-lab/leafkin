@@ -1,5 +1,5 @@
 # leafkin
-leafkin is an R-library to perform the calculations required for kinematic analysis of monocot leaves. The R-library is accompanied by a publication in Quantitative Plant Biology and can be found through the following DOI: XXXXXXXX
+leafkin is an R package to perform the calculations required for kinematic analysis of monocot leaves. The R package is accompanied by a publication in Quantitative Plant Biology and can be found through the following DOI: XXXXXXXX
 
 
 ## Abstract:
