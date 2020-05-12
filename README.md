@@ -2,12 +2,12 @@
 leafkin is an R-library to perform the calculations required for kinematic analysis of monocot leaves. The R-library is accompanied by a publication in the following journal: Quantitative Plant Biology, and can be found through the following DOI: XXXXXXXX
 
 
-Abstract:
+## Abstract:
 
 Growth is one of the most studied plant responses. At the cellular level, plant growth is driven by cell division and cell expansion. A means to quantify these two cellular processes is through kinematic analysis, a methodology which has been developed and perfected over the past decades, with in depth descriptions of the methodology available. Unfortunately, after performing the lab work, researchers are required to perform time-consuming, repetitive and error prone calculations. To lower the barrier towards this final step in the analysis and to aid researchers currently applying this technique, we have created leafkin, an R-package to perform all the calculations involved in the kinematic analysis of monocot leaves using only four functions. These functions support leaf elongation rate calculations, fitting of cell length profiles, extraction of fitted cell lengths and execution of kinematic equations. With the leafkin package, kinematic analysis of monocot leaves becomes more accessible than before.
 
 
-User specific errors / difficulties:
+## User specific errors / difficulties:
 
 1. Extra columns could be added through the use of Excel when creating the .txt file.
 
