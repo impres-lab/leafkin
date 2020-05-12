@@ -20,3 +20,7 @@ If you make sure that the selected columns contain your data and not any extra c
 2. Error when creating the pdf containing cell length fit plots: cannot open file
 
 This means that you have a pdf opened with exactly the same name as the one the get_pdf_with_cell_length_fit_plots() function is trying to create. This happens for instance when you create a pdf file with the get_pdf_with_cell_length_fit_plots() function, open the created pdf and run the function again with the pdf file still open. With the pdf file still open, R cannot replace the old file by the new file. Just close the pdf file and you should be able to run the function again. 
+
+3. Error when fitting cell lengths related to gridsize: Binning grid too coarse for current (small) bandwidth.
+
+There are limits to the interval which can be chosen. An interval that is too coarse will result in an error related to the gridsize. Very small intervals will slow down the function. In our experience, the 10-centimetre growth zone of a maize leaf is ideally analysed with an interval of 0.1 or 0.01 centimetre (i.e. resulting in 101 or 1001 datapoints respectively). It is also important to note that an insufficient number of cell length measurements could result in a failed bandwidth calculation (though tests revealed that only extreme borderline disruptions in the data resulted in an error). In that case, cell lengths are not fitted, and a warning is printed after executing the function, indicating the number of plants for which no bandwidth could be calculated.
