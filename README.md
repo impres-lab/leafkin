@@ -16,3 +16,7 @@ The use of Excel to enter data can, whilst being convenient, sometimes be the ca
 leaf_length_measurements %>% select(1:6)
 
 If you make sure that the selected columns contain your data and not any extra column, processing of the data should now be errorless. 
+
+2. Error when creating the pdf containing cell length fit plots: cannot open file
+
+This means that you have a pdf opened with exactly the same name as the one the get_pdf_with_cell_length_fit_plots() function is trying to create. This happens for instance when you create a pdf file with the get_pdf_with_cell_length_fit_plots() function, open the created pdf and run the function again with the pdf file still open. With the pdf file still open, R cannot replace the old file by the new file. Just close the pdf file and you should be able to run the function again. 
