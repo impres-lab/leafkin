@@ -1,11 +1,9 @@
-#' Get all fitted cell lengths: Calculates for each plant all cell lengths
-#'
-#' Produces, for each plant, all cell fitted lenghts over for a certain interval.
+#' Calculates all cell lengths for each plant at a given interval.
 #'
 #' This function takes in cell length data. The provided cell length data must
-#' be in a data.frame or tbl / tbl_df (tibble).
+#' be in a data.frame or tibble.
 #' The first column are the plant IDs and are used in the LER analysis (header =
-#' plant_id) .
+#' plant_id).
 #' The second column contains the positions of the cell length measurements in
 #' the leaf's growth zone (in cm) (header = position).
 #' The third column contains the cell length measurements (header = cell_length).
@@ -25,15 +23,15 @@
 #' which were calculated. You can use the
 #' \link{get_pdf_with_cell_length_fit_plots} function to extract all these
 #' bandwidths and use them to calculate the mean bandwidth. When not specified,
-#' the alternative bandwidth is set to 0.5 Normally, the cell lengths are
+#' the alternative bandwidth is set to 0.5. Normally, the cell lengths are
 #' returned in a tidy format. When tidy_cell_lengths is set to \code{FALSE}, a
 #' human readable wide table is returned.
 #'
-#' @param cell_length_data data.frame or tbl / tbl_df (tibble) containing the cell length data.
-#' @param interval_in_cm specifies the inteval at which cell lengths should be calculated.
-#' @param bw_multiplier multiplies the calculated bandwidth with the provided number.
-#' @param alternative_bw sets an alternative bandwidth if no band width could be calculated for the plant.
-#' @param tidy_cell_lengths \code{TRUE} by default. When \code{FALSE}, the function will return cell lengths as a human readable table.
+#' @param cell_length_data data.frame or tibble containing the cell length data.
+#' @param interval_in_cm specifies the inteval at which cell lengths should be calculated (default = 0.1).
+#' @param bw_multiplier multiplies the calculated bandwidth with the provided number (default = 1).
+#' @param alternative_bw sets an alternative bandwidth if no band width could be calculated for the plant (default = 0.5).
+#' @param tidy_cell_lengths \code{TRUE} by default, resulting in cell length returned in the tidy format. When \code{FALSE}, the function will return cell lengths as a human readable wide table.
 #'
 #' @author Jonas Bertels
 #'

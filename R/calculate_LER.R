@@ -7,14 +7,14 @@
 #' column headers are in the following date-time format: yyyy/mm/dd hh:mm or
 #' yyyy/mm/dd hh:mm:ss
 #' The provided leaf growth data must be in a data.frame or tibble. By default,
-#' it uses the two first LERs are used for the calculation of the LER mean. This
+#' it uses the two first LERs for the calculation of the LER mean. This
 #' means that at least three leaf length measurements are needed, allowing a
 #' minimum of two growth intervals to be calculated.
 #'
-#' @param leaf_length_data data.frame or tbl / tbl (tibble) containing the leaf length data.
+#' @param leaf_length_data data.frame or tibble containing the leaf length data.
 #' @param n_LER_for_mean specifies the number of calculated LERs which must be used to calculate
-#' the mean LER.
-#' @param output specifies what the the funtion should return. By default, a tibble of the calculated
+#' the mean LER (default = 2).
+#' @param output specifies what the funtion should return. By default, a tibble of the calculated
 #' mean LERs is returned ("means"). When selecting "tidy_LER", a tidy tibble containing all calculated
 #' LERs will be returned. "wide_LER" will return a wide, more human readable tibble of the calculated LERs.
 #'
@@ -28,7 +28,7 @@
 #' @importFrom  lubridate ymd_hms
 #' @export
 #'
-#' @return A tibble containing LERs. Depending on specified output parameter, LER output varies.
+#' @return A tibble containing LERs. Depending on the specified output parameter, LER output varies.
 #'
 
 calculate_LER <- function(leaf_length_data,

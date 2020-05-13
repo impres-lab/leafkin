@@ -1,4 +1,4 @@
-#' Functions, not needed by the user, but needed by the script
+#' Functions, not needed by the user, but needed by the script.
 #'
 #' Contains functions which are used by the \link{kinematic_analysis} function.
 #'
@@ -19,7 +19,7 @@ cumm_cell_no <- function(size_vect, pos_vect){
   resultsvector <- vector(mode = "numeric", length = length(size_vect))
   set_interval <- pos_vect[2] - pos_vect[1] #by subtracting the second position from the first position, we obtain the interval size
   for (x in 2:length(size_vect)) {
-    resultsvector[x] <- resultsvector[x-1] + ((set_interval*10000)/mean(c(size_vect[x-1], size_vect[x]))) #position is in cm, thus also interval. Since cell size in µmm the interval is set to µm to calculate how many cells fit in there. For this, average cell size is taken of the current cell size and previous cell size.
+    resultsvector[x] <- resultsvector[x-1] + ((set_interval*10000)/mean(c(size_vect[x-1], size_vect[x]))) #position is in cm, thus also interval. Since cell size in micrometre, the interval is set to micrometre to calculate how many cells fit in there. For this, average cell size is taken of the current cell size and previous cell size.
   }
   return(resultsvector)
 }

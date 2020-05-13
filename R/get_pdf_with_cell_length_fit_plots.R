@@ -1,18 +1,17 @@
-#' Cell lengths: Make a pdf containing the cell length fits.
+#' Make a pdf containing the cell length fits.
 #'
 #' Produces a pdf file in the work directory, containing all the graphs of the
 #' fitted cell lengths and their derivatives.
 #'
 #' This function takes in cell length data. The provided cell length data must
-#' be in a data.frame or tbl / tbl_df (tibble).
-#' The first column are the plant IDs and are used in the LER analysis (header =
-#' plant_id) .
+#' be in a data.frame or tibble.
+#' The first column contains the plant IDs (header = plant_id).
 #' The second column contains the positions of the cell length measurements in
 #' the leaf's growth zone (in cm) (header = position).
 #' The third column contains the cell length measurements (header = cell_length).
 #'
-#' Important: All cell length measurements are thus entered directly underneath
-#' eachother.
+#' Important: Cell length measurements of each plant are thus directly underneath
+#' eachother in the provided data.
 #'
 #' Concerning the variables:
 #' Using the interval_in_cm variable, you indicate how often (i.e. at which
@@ -30,9 +29,9 @@
 #' output_bw_tibble to \code{TRUE}, then the function will also return all
 #' calculated bandwidths as a tibble.
 #'
-#' @param cell_length_data data.frame or tbl / tbl_df (tibble) containing the cell length data.
-#' @param interval_in_cm specifies the inteval at which cell lengths should be calculated.
-#' @param bw_multiplier multiplies the calculated bandwidth with the provided number.
+#' @param cell_length_data data.frame or tibble containing the cell length data.
+#' @param interval_in_cm specifies the inteval in centimetre at which cell lengths should be calculated (default = 0.1).
+#' @param bw_multiplier multiplies the calculated bandwidth with the provided number (default = 1).
 #' @param output_bw_tibble \code{FALSE} by default. When \code{TRUE}, the function will return all calculated bandwidths as a tibble.
 #'
 #' @author Jonas Bertels
