@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions_needed_by_kinematic_analysis.R
 \name{cumm_cell_no}
 \alias{cumm_cell_no}
-\title{Functions, not needed by the user, but needed by the script}
+\title{Functions, not needed by the user, but needed by the script.}
 \usage{
 cumm_cell_no(size_vect, pos_vect)
 }

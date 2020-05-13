@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_all_fitted_cell_lengths.R
 \name{get_all_fitted_cell_lengths}
 \alias{get_all_fitted_cell_lengths}
-\title{Get all fitted cell lengths: Calculates for each plant all cell lengths}
+\title{Calculates all cell lengths for each plant at a given interval.}
 \usage{
 get_all_fitted_cell_lengths(
   cell_length_data,
@@ -13,31 +13,29 @@ get_all_fitted_cell_lengths(
 )
 }
 \arguments{
-\item{cell_length_data}{data.frame or tbl / tbl_df (tibble) containing the cell length data.}
+\item{cell_length_data}{data.frame or tibble containing the cell length data.}
 
-\item{interval_in_cm}{specifies the inteval at which cell lengths should be calculated.}
+\item{interval_in_cm}{specifies the inteval at which cell lengths should be calculated (default = 0.1).}
 
-\item{bw_multiplier}{multiplies the calculated bandwidth with the provided number.}
+\item{bw_multiplier}{multiplies the calculated bandwidth with the provided number (default = 1).}
 
-\item{alternative_bw}{sets an alternative bandwidth if no band width could be calculated for the plant.}
+\item{alternative_bw}{sets an alternative bandwidth if no band width could be calculated for the plant (default = 0.5).}
 
-\item{tidy_cell_lengths}{\code{TRUE} by default. When \code{FALSE}, the function will return cell lengths as a human readable table.}
+\item{tidy_cell_lengths}{\code{TRUE} by default, resulting in cell length returned in the tidy format. When \code{FALSE}, the function will return cell lengths as a human readable wide table.}
 }
 \value{
 A tidy tibble, containing all fitted cell lengths for each plant.
 }
 \description{
-Produces, for each plant, all cell fitted lenghts over for a certain interval.
-}
-\details{
 This function takes in cell length data. The provided cell length data must
-be in a data.frame or tbl / tbl_df (tibble).
+be in a data.frame or tibble.
 The first column are the plant IDs and are used in the LER analysis (header =
-plant_id) .
+plant_id).
 The second column contains the positions of the cell length measurements in
 the leaf's growth zone (in cm) (header = position).
 The third column contains the cell length measurements (header = cell_length).
-
+}
+\details{
 Using the interval_in_cm variable, you indicate how often (i.e. at which
 interval) a cell length should be calculated over the entire growth zone. By
 default, it is set to 0.1 cm.
@@ -53,7 +51,7 @@ could be estimated. Our advise is to use the mean bandwidth of bandwidths
 which were calculated. You can use the
 \link{get_pdf_with_cell_length_fit_plots} function to extract all these
 bandwidths and use them to calculate the mean bandwidth. When not specified,
-the alternative bandwidth is set to 0.5 Normally, the cell lengths are
+the alternative bandwidth is set to 0.5. Normally, the cell lengths are
 returned in a tidy format. When tidy_cell_lengths is set to \code{FALSE}, a
 human readable wide table is returned.
 }
