@@ -70,7 +70,7 @@ kinematic_analysis <- function(LER_means,
   }
   # Check whether all tidy_cell_lengths plant_id's are also in the LER_means plant_id's
   if(!all(unique(tidy_cell_lengths$plant_id) %in% unique(LER_means$plant_id))) {
-    stop("\n ##### \n Not all plant_id's in tidy_cell_lengths are represented in the plant_id's of LER_means. Bot measurements are needed to perform a kinematic analysis. Please make sure plant_id's are exactly the same as well.  \n #####")
+    stop("\n ##### \n Not all plant_id's in tidy_cell_lengths are represented in the plant_id's of LER_means. Both measurements are needed to perform a kinematic analysis. Please make sure plant_id's are exactly the same as well.  \n #####")
   }
 
 
