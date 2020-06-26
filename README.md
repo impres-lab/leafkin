@@ -10,7 +10,7 @@ Growth is one of the most studied plant responses. At the cellular level, plant 
 ## User specific errors / difficulties:
 
 ### 0. Installation of leafkin.
-
+- Starting with R 4.0.0 (released April 2020), R for **Windows** uses a brand new toolchain bundle called Rtools40. Rtools40 is therefore required for leafkin installation through GitHub on Windows and should be downloaded from https://cran.r-project.org/bin/windows/Rtools/. After installation of Rtools40 on your computer, you should be set up to install leafkin form the impres-lab GitHub repository.
 - During the intallation of leafkin using the following function: `devtools::install_github("impres-lab/leafkin")`, you will be prompted to install and/or update the packages used by the leafkin package. On you first try, you should choose to install/update all packages suggested by the function (first option, **1: All**, when prompted: "*Enter one or more numbers, or an empty line to skip updates:*"). 
 - If, during installtion, you are prompted with the question to compile packages or not (i.e. "*Do you want to install from sources the package which needs compilation? (Yes/no/cancel)*"), the most stable option here is to choose **no**, since local compilation of the latest uncompiled packages sometimes results in an error. When you select **no**, the latest precompiled version of the packages is installed, which is just fine for leafkin.
 - When you have tried this and there is still an error occuring during installation, you should skip updates of the remaining packages causing an error during installation (just hit your **ENTER** key when prompted: "*Enter one or more numbers, or an empty line to skip updates:*". This should install leafkin.
