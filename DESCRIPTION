@@ -15,7 +15,7 @@ Description: Contains functions to easily analyse leaf length data in millimeter
     length and cell lengths, both in micrometer) to obtain a range of kinematic 
     paramters on cell division and elongation.
 Depends:
-    R (>= 3.6.1)
+    R (>= 4.0.0)
 License: CC0
 Encoding: UTF-8
 LazyData: true
