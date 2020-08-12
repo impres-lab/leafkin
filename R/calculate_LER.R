@@ -68,7 +68,7 @@ calculate_LER <- function(leaf_length_data,
   tidy_leaf_length_data$date_and_hour <- lubridate::ymd_hms(tidy_leaf_length_data$date_and_hour, truncated = 1)
 
   if(anyNA(tidy_leaf_length_data$date_and_hour)) {
-    stop("\n ##### \n Please check the dates in the provided file. They should be in the format yyyy/mm/dd hh:mm. \n #####")
+    stop("\n ##### \n Please check the dates in the provided file. They should be in the format yyyy/mm/dd hh:mm or yyyy/mm/dd hh:mm:ss. \n #####")
   }
 
   # *** Order based on plant and timepoint to allow me to calculate time and growth and eventually LER
